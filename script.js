@@ -191,7 +191,8 @@ const characters = [{
 
 //Get assigned a character and their description at random
 let getCharacter = characters[Math.floor(Math.random()*characters.length)]
-console.log(`CHARACTER: 
+console.log(`RELOAD TO GET NEW CHARACTER AND OUTCOME!
+CHARACTER: 
 Name: ${getCharacter.name}
 Species: ${getCharacter.species}
 Description: ${getCharacter.description}`);
@@ -210,7 +211,7 @@ function randomAction(){
 }
 }
 
-console.log(`ACTIONS:
+console.log(`ACTION:
 ${randomAction()}`)
 
 //* BAONUS assignment:
