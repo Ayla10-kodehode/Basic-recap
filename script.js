@@ -248,9 +248,9 @@ function coolMaker(tekst) {
         return`😎${tekst*2}😎`
     } else if (typeof tekst === "boolean"){
         return tekst ? `😎Yeah😎` : `😎Chill😎`
-    }
+    } 
 }
-console.log(coolMaker(false)); 
+console.log(coolMaker(true)); 
 
 
 
