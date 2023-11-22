@@ -128,10 +128,9 @@ Use arrow function syntax.
 Example: your function receives 13 and 24, it should return the sum of 24/13 */
 
 //! Write code here
-const checkNumber = (number1, number2) => { 
-    return Math.max(number1,number2)/Math.min(number1,number2) 
-}   
-console.log(checkNumber(24,13))
+const checkNumber = (number1, number2) => Math.max(number1,number2)/Math.min(number1,number2) 
+   
+console.log(checkNumber(24,13));
 
 
 //* Assignment 10:
@@ -212,7 +211,7 @@ function randomAction(){
 }
 
 console.log(`ACTION:
-${randomAction()}`)
+${randomAction()}`);
 
 //* BAONUS assignment:
 /*
@@ -241,3 +240,71 @@ Console log the function call with a few different datatypes to show that it's w
 */
 
 //! Write code here 
+
+function coolMaker(tekst) {
+    if (typeof tekst === "string"){
+        return`😎${tekst}😎`
+    } else if (typeof tekst === "number"){
+        return`😎${tekst*2}😎`
+    } else if (typeof tekst === "boolean"){
+        return tekst ? `😎Yeah😎` : `😎Chill😎`
+    }
+}
+console.log(coolMaker(false)); 
+
+
+
+
+const classFeatures = [
+    {
+      class: "Cleric",
+      abilityScore: "wisdom",
+      proficiencies: ["simpleWeapons", "mediumArmour", "divineMagic"],
+    },
+    {
+      class: "Bard",
+      abilityScore: "charisma",
+      proficiencies: ["musicalInstruments", "lightArmour", "arcaneMagic"],
+    },
+    {
+      class: "wizard",
+      abilityScore: "intelligence",
+      proficiencies: ["quarterStaff", "noArmour", "arcaneMagic"],
+    },
+  ];
+  
+  let randomClass = classFeatures[Math.floor(Math.random() * classFeatures.length)];
+  console.log(randomClass.class);
+  
+   function getProficiency(){
+   if (randomClass.class==="Cleric"){
+     return ` proficiency 1: ${randomClass.proficiencies[0]}
+ proficiency 2: ${randomClass.proficiencies[1]}
+ proficiency 3: ${randomClass.proficiencies[2]}`
+   } else if (randomClass.class==="Bard"){
+      return `proficiency 1: ${randomClass.proficiencies[0]}
+proficiency 2: ${randomClass.proficiencies[1]}
+proficiency 3: ${randomClass.proficiencies[2]}`
+    } else {
+              return `proficiency 1: ${randomClass.proficiencies[0]}
+proficiency 2: ${randomClass.proficiencies[1]}
+proficiency 3: ${randomClass.proficiencies[2]}`
+            }
+}
+
+console.log(getProficiency())
+  
+ /* function getProficiency(){
+//  if (randomClass.class==="Cleric"){
+    let allProficiencies = [];
+    for (let i = 0; i < randomClass.proficiencies.length; i++) {
+        allProficiencies.push(randomClass.proficiencies[i])
+    }
+return allProficiencies.join(", ")
+//   }
+  }
+
+  console.log(getProficiency())*/
+
+
+  
