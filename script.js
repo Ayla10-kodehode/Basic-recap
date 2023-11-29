@@ -49,6 +49,16 @@ if (bokstaver.length) {
     let randomBokstaver = bokstaver[Math.floor(Math.random()*bokstaver.length)]
     console.log(randomBokstaver)   
 }
+// for å loope igjennom arrayet og få flere bokstaver til en random string
+function generateRandomString(length, arr) {
+        let randomString = ""
+        for (let i = 0; i < length; i++){
+        let random = arr[Math.floor(Math.random()*arr.length)]
+        randomString += random
+        }
+        console.log(randomString)
+    }
+    generateRandomString(4,bokstaver)
 
 //* Assignment 5:
 /* Make a function that uses a parameter to check if a number is odd or even */
@@ -62,6 +72,13 @@ function evenOrOdd(tall) {
 }
 console.log(evenOrOdd(3084))
 
+/*
+{
+return tall % 2 === 0 ? "Even" : "Odd"
+}
+console.log(evenOrOdd(3084))
+
+const evenOdd = (tall) =>
 //* Assigment 6:
 /* Make a variable called userTitle and set the content equal to "Mr." if userMale is true,
 or to "Mrs." if userMale is false. Use the TERNARY conditional to do this:
@@ -98,13 +115,13 @@ Console log the function a few times to show that it's working. */
 
 //! Write code here
 function greeting(name, number) {
-    if (number <= 6) {
+    if (number >= 0 && number <= 6) {
         return `Good night ${name}`
-    }  else if (number <= 12) {
+    }  else if (number > 6 && number <= 12) {
         return `Good morning ${name}`
-    } else if (number <= 18) {
+    } else if (number >12 && number <= 18) {
         return `Good day ${name}`
-    } else if (number <= 24) {
+    } else if (number >18 && number <= 24) {
         return `Good evening ${name}`
     } else {
         return `Invalid time`
@@ -253,3 +270,15 @@ function coolMaker(tekst) {
     }
 }
 console.log(coolMaker()); 
+
+
+
+function coolMaker2(tekst) {
+    return typeof tekst === "string" ?
+     `😎${tekst}😎`:
+    typeof tekst === "number" ?
+     `😎${tekst*2}😎`:
+    typeof tekst === "boolean" ? (tekst ? `😎Yeah😎` : `😎Chill😎`) 
+    : `😎Primitive values only😎`;
+}
+console.log(coolMaker2(4))
