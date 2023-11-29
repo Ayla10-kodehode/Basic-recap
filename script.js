@@ -60,7 +60,7 @@ function evenOrOdd(tall) {
         return "Odd"
     }
 }
-console.log(evenOrOdd(1))
+console.log(evenOrOdd(3084))
 
 //* Assigment 6:
 /* Make a variable called userTitle and set the content equal to "Mr." if userMale is true,
@@ -72,7 +72,7 @@ Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working. */
 
 //! Write code here
-const userMale = false;
+const userMale = true;
 const userTitle = userMale ? "Mr." : "Mrs." ;
 console.log(userTitle);
 
@@ -248,63 +248,8 @@ function coolMaker(tekst) {
         return`😎${tekst*2}😎`
     } else if (typeof tekst === "boolean"){
         return tekst ? `😎Yeah😎` : `😎Chill😎`
-    } 
-}
-console.log(coolMaker(true)); 
-
-
-
-
-const classFeatures = [
-    {
-      class: "Cleric",
-      abilityScore: "wisdom",
-      proficiencies: ["simpleWeapons", "mediumArmour", "divineMagic"],
-    },
-    {
-      class: "Bard",
-      abilityScore: "charisma",
-      proficiencies: ["musicalInstruments", "lightArmour", "arcaneMagic"],
-    },
-    {
-      class: "wizard",
-      abilityScore: "intelligence",
-      proficiencies: ["quarterStaff", "noArmour", "arcaneMagic"],
-    },
-  ];
-  
-  let randomClass = classFeatures[Math.floor(Math.random() * classFeatures.length)];
-  console.log(randomClass.class);
-  
-   function getProficiency(){
-   if (randomClass.class==="Cleric"){
-     return ` proficiency 1: ${randomClass.proficiencies[0]}
- proficiency 2: ${randomClass.proficiencies[1]}
- proficiency 3: ${randomClass.proficiencies[2]}`
-   } else if (randomClass.class==="Bard"){
-      return `proficiency 1: ${randomClass.proficiencies[0]}
-proficiency 2: ${randomClass.proficiencies[1]}
-proficiency 3: ${randomClass.proficiencies[2]}`
     } else {
-              return `proficiency 1: ${randomClass.proficiencies[0]}
-proficiency 2: ${randomClass.proficiencies[1]}
-proficiency 3: ${randomClass.proficiencies[2]}`
-            }
-}
-
-console.log(getProficiency())
-  
- /* function getProficiency(){
-//  if (randomClass.class==="Cleric"){
-    let allProficiencies = [];
-    for (let i = 0; i < randomClass.proficiencies.length; i++) {
-        allProficiencies.push(randomClass.proficiencies[i])
+        return `😎Primitive values only😎`
     }
-return allProficiencies.join(", ")
-//   }
-  }
-
-  console.log(getProficiency())*/
-
-
-  
+}
+console.log(coolMaker()); 
